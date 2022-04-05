@@ -5,14 +5,17 @@ namespace Mol.Classes
     {
         public void Action(Molecula target, Molecula thisMolecula)
         {
-            if (target.Weight < thisMolecula.Weight) 
+            if (thisMolecula.WayOfEating.GetType() == typeof(Carnivores))
             {
-                System.Console.WriteLine($"{thisMolecula.Name} atack {target.Name}");
-                thisMolecula = thisMolecula * target;
-            }
-            else
-            {
-                thisMolecula.Mover.Move(10f);
+                if (target.Weight < thisMolecula.Weight)
+                {
+                    System.Console.WriteLine($"{thisMolecula.Name} atack {target.Name}");
+                    thisMolecula = thisMolecula * target;
+                }
+                else
+                {
+                    thisMolecula.Mover.Move(10f);
+                }
             }
         }
     }

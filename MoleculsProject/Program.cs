@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MoleculsProject
+namespace Mol
 {
     internal class Program
     {

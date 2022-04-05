@@ -6,8 +6,9 @@ namespace Mol.Classes
     {
         public string Name { get; set; }
         public float Weight { get; set; }
-        public IMove Mover;
-        public IAtack Atack;
+        public IMove Mover { get; set; }
+        public IAtack Atack { get; set; }
+        public IWayOfEating WayOfEating { get; set; }
         public Molecula() : this("Default",1.0f)
         {
             
