@@ -10,7 +10,19 @@ namespace Mol.Classes
                 if (target.Weight < thisMolecula.Weight)
                 {
                     System.Console.WriteLine($"{thisMolecula.Name} atack {target.Name}");
+                    thisMolecula.WayOfEating.Eat(thisMolecula);
                     thisMolecula = thisMolecula * target;
+                }
+                else
+                {
+                    thisMolecula.Mover.Move(10f);
+                }
+            }
+            else
+            {
+                if (target.Weight < thisMolecula.Weight)
+                {
+                    thisMolecula.WayOfEating.Eat(thisMolecula);
                 }
                 else
                 {

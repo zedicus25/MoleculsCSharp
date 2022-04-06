@@ -1,5 +1,5 @@
 ﻿using Mol.Interfaces;
-
+using System;
 namespace Mol.Classes
 {
     class Molecula
@@ -15,8 +15,25 @@ namespace Mol.Classes
         }
         public Molecula(string name, float weight)
         {
+            Mover = new Movement();
+            Atack = new Attack();
+            WayOfEating = new Herbivores();
             Name = name;  
             Weight = weight;   
+        }
+
+        public Molecula Division()
+        {
+            if (Weight > 5.0f)
+            {
+                Weight -= 2.0f;
+                return new Molecula("Division Molecula", 2.0f);
+            }
+            else
+            {
+                Console.WriteLine("I cant division, because i small");
+                return null;
+            }
         }
 
         public static Molecula operator + (Molecula m1, Molecula m2)
