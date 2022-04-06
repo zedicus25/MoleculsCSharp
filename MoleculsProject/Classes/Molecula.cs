@@ -17,7 +17,6 @@ namespace Mol.Classes
         {
             Mover = new Movement();
             Atack = new Attack();
-            WayOfEating = new Herbivores();
             Name = name;  
             Weight = weight;   
         }
