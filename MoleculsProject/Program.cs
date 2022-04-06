@@ -16,6 +16,13 @@ namespace Mol
             HerbivoresMolecula herbMolecula = new HerbivoresMolecula("HerMolecula",4.0f);
             carMolecula.Atack.Action(herbMolecula, carMolecula);
             herbMolecula.Atack.Action(carMolecula, herbMolecula);*/
+
+
+            /*CarnivoresMolecula carMolecula = new CarnivoresMolecula("CarMolecula",6.0f);
+            HerbivoresMolecula herbMolecula = new HerbivoresMolecula("HerMolecula",4.0f);
+            Molecula divisionMol = carMolecula.Division();
+            Console.WriteLine(divisionMol.Name + "\n");
+            herbMolecula.Division();*/
         }
     }
 }

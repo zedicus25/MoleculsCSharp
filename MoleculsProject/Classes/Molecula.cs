@@ -26,6 +26,7 @@ namespace Mol.Classes
             if (Weight > 5.0f)
             {
                 Weight -= 2.0f;
+                Console.WriteLine("Division succefull");
                 return new Molecula("Division Molecula", 2.0f);
             }
             else

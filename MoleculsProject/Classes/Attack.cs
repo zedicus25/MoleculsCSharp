@@ -12,6 +12,7 @@ namespace Mol.Classes
                     System.Console.WriteLine($"{thisMolecula.Name} atack {target.Name}");
                     thisMolecula.WayOfEating.Eat(thisMolecula);
                     thisMolecula.Weight = thisMolecula.Weight + target.Weight;
+                    target.Weight = 0f;
                 }
                 else
                 {
